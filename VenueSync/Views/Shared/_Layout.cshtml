@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - VenueSync</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="/" class="logo">VenueSync</a>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/Venues">Venues</a></li>
+                    <li><a href="/Events">Events</a></li>
+                    <li><a href="/Bookings">Bookings</a></li>
+                    @if (Context.Session.GetString("Admin") != null)
+                    {
+                        <li><span style="color: #fff; font-weight: bold;">Hello, @Context.Session.GetString("Admin")</span></li>
+                        <li><a href="/Account/Logout">Logout</a></li>
+                    }
+                    else
+                    {
+                        <li><a href="/Account/Login">Admin Login</a></li>
+                    }
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        @RenderBody()
+    </main>
+
+    <footer>
+        <p>&copy; 2026 VenueSync. All rights reserved.</p>
+    </footer>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    .navbar {
+        background-color: #007bff;
+        padding: 1rem 2rem;
+    }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+    .logo {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+    }
+
+        .nav-links li a, .nav-links li span {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            .nav-links li a:hover {
+                text-decoration: underline;
+            }
+
+    .main-content {
+        padding: 2rem;
+    }
+
+    footer {
+        text-align: center;
+        padding: 1rem;
+        background-color: black;
+        color: white;
+    }
+</style>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     

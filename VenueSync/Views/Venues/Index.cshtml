@@ -1,0 +1,23 @@
+﻿@model IEnumerable<VenueSync.Models.Venue>
+
+<h2>Venues</h2>
+
+<a asp-action="Create" class="button">+ Add Venue</a>
+
+<div class="card-container">
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <img src="@item.ImageUrl" alt="Venue Image" />
+
+            <div class="card-body">
+                <h3>@item.VenueName</h3>
+                <p>@item.Location</p>
+                <p><strong>Capacity:</strong> @item.Capacity</p>
+
+                <a asp-action="Edit" asp-route-id="@item.VenueId" class="button">Edit</a>
+                <a asp-action="Delete" asp-route-id="@item.VenueId" class="button delete-btn">Delete</a>
+            </div>
+        </div>
+    }
+</div>

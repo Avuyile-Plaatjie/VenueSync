@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36915.13 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VenueSync", "VenueSync\VenueSync.csproj", "{A458C379-4575-4DB4-B65C-783C005956EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A458C379-4575-4DB4-B65C-783C005956EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A458C379-4575-4DB4-B65C-783C005956EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A458C379-4575-4DB4-B65C-783C005956EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A458C379-4575-4DB4-B65C-783C005956EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF39FE74-E76F-41EF-A8D0-FCF4EEFFCFE5}
+	EndGlobalSection
+EndGlobal

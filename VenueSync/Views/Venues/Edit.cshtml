@@ -1,0 +1,21 @@
+﻿@model VenueSync.Models.Venue
+
+<h2>Edit Venue</h2>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="VenueId" />
+
+    <label>Name</label>
+    <input asp-for="VenueName" class="form-control" />
+
+    <label>Location</label>
+    <input asp-for="Location" class="form-control" />
+
+    <label>Capacity</label>
+    <input asp-for="Capacity" class="form-control" />
+
+    <label>Image URL</label>
+    <input asp-for="ImageUrl" class="form-control" />
+
+    <button type="submit" class="button">Update</button>
+</form>

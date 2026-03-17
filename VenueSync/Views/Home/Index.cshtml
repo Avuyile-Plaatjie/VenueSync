@@ -1,0 +1,166 @@
+﻿@{
+    ViewData["Title"] = "Welcome to VenueSync";
+}
+
+<div class="home-hero">
+    <div class="hero-content">
+        <h1>Welcome to <span class="highlight">VenueSync</span></h1>
+        <p>Your professional venue booking management platform. Streamline bookings, manage events, and keep everything organized in one place.</p>
+        <div class="hero-buttons">
+            <a href="/Venues" class="btn-primary">Manage Venues</a>
+            <a href="/Events" class="btn-secondary">Manage Events</a>
+            <a href="/Bookings" class="btn-tertiary">Bookings</a>
+        </div>
+    </div>
+</div>
+
+<div class="features-section">
+    <h2>Why VenueSync?</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <h3>Effortless Scheduling</h3>
+            <p>Prevent double bookings and easily assign events to venues.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Secure Cloud Storage</h3>
+            <p>All your bookings and event data stored safely in the cloud with backups.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Professional Interface</h3>
+            <p>Clean, intuitive design with responsive layout for any device.</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        color: #222;
+    }
+
+    .home-hero {
+        background: url('https://images.unsplash.com/photo-1712903276152-b09be3fdfbe5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZXZlbnQlMjBjb2xsYWdlc3xlbnwwfHwwfHx8MA%3D%3D') no-repeat center center;
+        background-size: cover;
+        padding: 6rem 2rem;
+        color: white;
+        text-align: center;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+        .home-hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 0;
+        }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+    }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content .highlight {
+            color: #fff200;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+        }
+
+    .hero-buttons a {
+        display: inline-block;
+        padding: 0.7rem 1.5rem;
+        margin: 0.5rem;
+        border-radius: 5px;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+        transition: transform 0.2s;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+    .btn-secondary {
+        background-color: black;
+    }
+
+        .btn-secondary:hover {
+            background-color: #333;
+            transform: translateY(-2px);
+        }
+
+    .btn-tertiary {
+        background-color: #1a1a1a;
+    }
+
+        .btn-tertiary:hover {
+            background-color: #000;
+            transform: translateY(-2px);
+        }
+
+    /* Features Section */
+    .features-section {
+        padding: 4rem 2rem;
+        text-align: center;
+        background-color: white;
+    }
+
+        .features-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            color: #007bff;
+        }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+        border-radius: 8px;
+        background-color: #f0f2f5;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        transition: transform 0.2s;
+    }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: #222;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+</style>

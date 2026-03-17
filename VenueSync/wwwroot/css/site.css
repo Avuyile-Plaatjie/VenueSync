@@ -1,0 +1,150 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f7f9fc;
+    color: #111;
+}
+
+header {
+    background-color: #001f4d;
+    padding: 1rem 0;
+    color: white;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00aaff;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+    .navbar .nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+        .navbar .nav-links li a:hover {
+            color: #00aaff;
+        }
+
+.container {
+    width: 90%;
+    margin: 2rem auto;
+}
+
+footer {
+    background-color: #001f4d;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+.card-body {
+    padding: 1rem 1.5rem;
+}
+
+    .card-body h3 {
+        margin: 0;
+        color: #001f4d;
+    }
+
+    .card-body p {
+        color: #333;
+        margin-top: 0.5rem;
+    }
+
+.button {
+    display: inline-block;
+    background-color: #001f4d;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+    .button:hover {
+        background-color: #00aaff;
+    }
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+    .table th, .table td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+.button {
+    background-color: #001f4d;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+    .button:hover {
+        background-color: #00aaff;
+    }
+
+.delete-btn {
+    background-color: red;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+.card-body {
+    padding: 15px;
+}

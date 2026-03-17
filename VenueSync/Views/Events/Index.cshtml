@@ -1,0 +1,21 @@
+﻿@model IEnumerable<VenueSync.Models.Event>
+
+<h2>Events</h2>
+
+<a asp-action="Create" class="button">+ Add Event</a>
+
+<div class="card-container">
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <div class="card-body">
+                <h3>@item.EventName</h3>
+                <p>@item.Description</p>
+                <p><strong>Date:</strong> @item.EventDate.ToShortDateString()</p>
+
+                <a asp-action="Edit" asp-route-id="@item.EventId" class="button">Edit</a>
+                <a asp-action="Delete" asp-route-id="@item.EventId" class="button delete-btn">Delete</a>
+            </div>
+        </div>
+    }
+</div>

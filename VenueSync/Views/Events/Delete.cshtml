@@ -1,0 +1,17 @@
+﻿@model VenueSync.Models.Event
+
+<h2>Delete Event</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h3>@Model.EventName</h3>
+        <p>@Model.Description</p>
+        <p>@Model.EventDate.ToShortDateString()</p>
+    </div>
+</div>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="EventId" />
+    <button type="submit" class="button delete-btn">Delete</button>
+    <a asp-action="Index" class="button">Cancel</a>
+</form>

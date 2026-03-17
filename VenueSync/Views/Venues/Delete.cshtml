@@ -1,0 +1,18 @@
+﻿@model VenueSync.Models.Venue
+
+<h2>Delete Venue</h2>
+
+<div class="card">
+    <img src="@Model.ImageUrl" />
+    <div class="card-body">
+        <h3>@Model.VenueName</h3>
+        <p>@Model.Location</p>
+        <p>Capacity: @Model.Capacity</p>
+    </div>
+</div>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="VenueId" />
+    <button type="submit" class="button delete-btn">Delete</button>
+    <a asp-action="Index" class="button">Cancel</a>
+</form>

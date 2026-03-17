@@ -1,0 +1,15 @@
+﻿@model VenueSync.Models.Booking
+
+<h2>Delete Booking</h2>
+
+<div class="card">
+    <p><strong>Venue:</strong> @Model.Venue?.VenueName</p>
+    <p><strong>Event:</strong> @Model.Event?.EventName</p>
+    <p><strong>Date:</strong> @Model.BookingDate.ToShortDateString()</p>
+</div>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="BookingId" />
+    <button type="submit" class="button" style="background:red;">Delete</button>
+    <a href="/Bookings" class="button">Cancel</a>
+</form>

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<VenueSync.Models.Booking>
+
+<h2>Bookings</h2>
+
+<a asp-action="Create" class="button">+ Create New Booking</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Venue</th>
+            <th>Event</th>
+            <th>Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Venue?.VenueName</td>
+                <td>@item.Event?.EventName</td>
+                <td>@item.BookingDate.ToShortDateString()</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.BookingId" class="button">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.BookingId" class="button delete-btn">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,59 +1,64 @@
  VenueSync
-
-VenueSync is a web-based venue and event management system built with ASP.NET Core MVC and Entity Framework Core. The application allows administrators to manage venues, events, and bookings efficiently. It provides a professional interface to prevent double bookings, maintain venue details, and streamline event management.
-
-
-
- Features
-
-- Venue Management
-  - Add, edit, and delete venues.
-  - Store venue details including name, location, capacity, description, and images.
-  
-- Event Management
-  - Add, edit, and delete events.
-  - Assign events to specific venues with date validation to prevent double bookings.
-
-- Booking System
-  - Book events at available venues.
-  - Prevent booking conflicts at the same venue and date.
-
-- Admin Login
-  - Secure login system for administrators.
-  - Only logged-in admins can access venue and event management pages.
-  - Session-based authentication for managing admin access.
-
-
-
- Admin Login
-
-The app uses a simple username and password system for admin access:
-
-- Default credentials (configured in the database seeding):
-  - Username: `admin`
-  - Password: `password123`
-
- How it works:
-1. Navigate to the login page (`/Account/Login`).
-2. Enter the admin username and password.
-3. If credentials are correct, a session is created, granting access to admin pages like Venues and Events.
-4. To log out, click the Logout button, which clears the session.
-
-> Only admins can perform create, edit, or delete operations. Visitors cannot access these pages without logging in.
-
-
-
+VenueSync: Event & Venue Management System
+VenueSync is a full-stack web application built with ASP.NET Core MVC designed for venue owners and event organizers. It provides a centralized platform to manage physical spaces, schedule events, and handle client bookings with built-in business logic for data integrity and security.
+Features
+ Venue & Event Gallery
+•	Azure Blob Integration: Dynamically handles venue image uploads and storage using Azure Blob Storage.
+•	Responsive UI: A modern, card-based gallery layout for browsing venues and scheduled events.
+•	Color-Coded Dashboard: Intuitive yellow-themed navigation for administrative tasks.
+Security & Access Control
+•	Session-Based Authentication: Management features (Create/Edit/Delete) are locked behind a secure login wall.
+•	Dynamic Navigation: The header automatically adjusts to show or hide administrative links based on the user's login status.
+Business Logic & Data Integrity
+•	Referential Integrity Safeguards: Prevents the deletion of Venues or Events if they are associated with active bookings, ensuring historical data is never lost accidentally.
+•	Booking Conflict Detection: Built-in validation to prevent double-booking a venue on the same date.
+•	Search Functionality: Robust search filters for the Bookings management table.
  Tech Stack
+•	Framework: ASP.NET Core MVC 8.0
+•	Language: C#
+•	Database: SQL Server (Entity Framework Core)
+•	Cloud Storage: Azure Blob Storage (for venue imagery)
+•	Frontend: Razor Views, Bootstrap 5, Custom CSS
+•	Architecture: Repository-like service patterns 
 
-- Backend: ASP.NET Core MVC  
-- Database: SQL Server with Entity Framework Core  
-- Frontend: Razor Views, HTML, CSS  
-- Authentication: Session-based admin login  
+Setup & Installation
+Prerequisites
+•	Visual Studio 2022
+•	.NET 8.0 SDK
+•	SQL Server (LocalDB or Azure SQL)
+•	Azure Storage Account (Connection string required)
+Configuration
+Update your appsettings.json with your specific connection strings:
+
+JSON:
+
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Your_SQL_Server_Connection_String"
+  },
+  "AzureStorage": {
+    "ConnectionString": "Your_Azure_Blob_Storage_String",
+    "ContainerName": "venue-images"
+  }
+}
+
+Database Initialization
+Run the following commands in the Package Manager Console:
+Add-Migration InitialCreate Update-Database
+
+Project Structure
+•	/Controllers: Contains logic for Venues, Events, Bookings, and Account management.
+•	/Models: Database schemas and ViewModels.
+•	/Views: Razor templates (Layouts, Gallery Views, Management Forms).
+•	/Services: Specialized logic for Azure Blob uploads and business rules.
+•	/wwwroot: Static assets (CSS, Site JavaScript, Bootstrap).
+
+Deployment
+This application is designed for seamless deployment to Azure App Service.
+1.	Create an Azure App Service and Azure SQL Database.
+2.	Configure Application Settings in the Azure Portal to store sensitive connection strings.
+3.	Deploy via GitHub Actions or Visual Studio Publish.
 
 
 
- Installation
 
-1. Clone the repository:
-   bash
-   git clone <your-repo-url>

@@ -30,34 +30,8 @@ Prerequisites
 Configuration
 Update your appsettings.json with your specific connection strings:
 
-JSON:
 
-{
-  "ConnectionStrings": {
-    "DefaultConnection": "Your_SQL_Server_Connection_String"
-  },
-  "AzureStorage": {
-    "ConnectionString": "Your_Azure_Blob_Storage_String",
-    "ContainerName": "venue-images"
-  }
-}
 
-Database Initialization
-Run the following commands in the Package Manager Console:
-Add-Migration InitialCreate Update-Database
-
-Project Structure
-•	/Controllers: Contains logic for Venues, Events, Bookings, and Account management.
-•	/Models: Database schemas and ViewModels.
-•	/Views: Razor templates (Layouts, Gallery Views, Management Forms).
-•	/Services: Specialized logic for Azure Blob uploads and business rules.
-•	/wwwroot: Static assets (CSS, Site JavaScript, Bootstrap).
-
-Deployment
-This application is designed for seamless deployment to Azure App Service.
-1.	Create an Azure App Service and Azure SQL Database.
-2.	Configure Application Settings in the Azure Portal to store sensitive connection strings.
-3.	Deploy via GitHub Actions or Visual Studio Publish.
 
 
 
